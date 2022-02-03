@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function equalizeArray(arr) {\n    let obj = {}\n    for (let i of arr ){\n        if(obj[i]){\n            obj[i]++\n        }else {\n            obj[i] = 1 \n        }\n    }\n   const value =  Object.values(obj)\n   const max = Math.max(...value);\n   const finalResult = arr.length - max;\n   return finalResult;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function howManyGames(p, d, m, s) {\n    let total = p;\n    let x = 0;\n    while(total <= s){\n    p = p - d;\n    if(p <= m){\n      total = total + m;\n      x++;\n    }else{\n      total = total + p;\n      x++;\n    }\n    \n}\nreturn x;\n\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function squares(a, b) {\n    let squareOfthei = 0, i = 1, counter = 0;\n   while (squareOfthei <= b) {\n       squareOfthei = i * i;\n       if (squareOfthei >= a && squareOfthei <= b) {\n           counter += 1;\n       }\n       i += 1;\n   }\n   return counter;\n}\n"
+            ],
+            "outputs": []
+        }
+    ]
+}
