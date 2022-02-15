@@ -39,7 +39,7 @@ const wordLength = (str) => {
 // Output: false
 //
 // Input: "table", "label"
-// Output: false
+// Output: false                     
 //
 // Input: "cat", "rat"
 // Output: false
@@ -49,10 +49,11 @@ const wordLetters = (str1, str2) => {
     let lenStr2 = str2.length;
     let str1Arr = str1.split("").sort()
     let str2Arr = str2.split("").sort()
-    if (lenStr1 != lenStr2) {
+ 
+    for (let i = 0; i < lenStr1; i++) {
+           if (lenStr1 != lenStr2) {
         return false;
     }
-    for (let i = 0; i < lenStr1; i++) {
         if (str1Arr[i] != str2Arr[i]) {
             return false;
         }
