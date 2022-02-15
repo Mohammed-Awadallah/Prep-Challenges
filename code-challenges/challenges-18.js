@@ -17,15 +17,10 @@
 const wordLength = (str) => {
     let newArr = str.split(" ")
     let len = newArr.length;
-    let index ;
-    if (len % 2 == 1) {
-        index = ((len/2) + 0.5) - 1
-    }
-    if(len % 2 != 1){
-        index = ((len/2) + 1) - 1
-    }
-   let wordLength = newArr[index].toString().split("").length
-   return wordLength
+    let index;
+    index = Math.floor(len / 2);
+    let wordLength = newArr[index].length
+    return wordLength
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -34,7 +29,7 @@ const wordLength = (str) => {
 // Challenge 02:
 // Required:
 //
-// Write a function that takes two strings and checks if the two strings contain the same combination of letters
+// Write a function that takes two strings and checks if the two strings contain the same combination of letters 
 //
 // Ex:
 // Input: "dad", "add"
@@ -54,11 +49,13 @@ const wordLetters = (str1, str2) => {
     let lenStr2 = str2.length;
     let str1Arr = str1.split("").sort()
     let str2Arr = str2.split("").sort()
-    if (lenStr1 != lenStr2){
-    return false;}
-    for(let i = 0; i < lenStr1; i++){
-    if (str1Arr[i] != str2Arr[i]){
-        return false;}
+    if (lenStr1 != lenStr2) {
+        return false;
+    }
+    for (let i = 0; i < lenStr1; i++) {
+        if (str1Arr[i] != str2Arr[i]) {
+            return false;
+        }
     }
     return true;
 }
@@ -79,12 +76,22 @@ const wordLetters = (str1, str2) => {
 // Input: [1,3,5,6], 2
 // Output: 1
 //
-// Input: [1,3,5,6], 7
+// Input: [1,3,5,6], 7  
 // Output: 4
 //
 
 const targetIndex = (arr, int) => {
-    // write your code here
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == int) {
+            return i;
+        }
+        if (arr[i] > int) {
+            return i;
+        }
+
+    }
+    return arr.length
 }
 // -------------------------------------------------------------------------------------------------------
 
